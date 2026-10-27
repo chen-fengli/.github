@@ -241,11 +241,11 @@ git submodule update --remote
 
 ## 问题
 
-###### 国内访问 github 可能较慢
+### 国内访问 github 可能较慢
 
 这里提供 github 加速方案和科学上网的 [链接](https://openhutb.github.io/doc/build_carla/#internet) 。
 
-###### 向 github 上 push 的时候报 403 错误
+### 向 github 上 push 的时候报 403 错误
 
 打开`.git/config`，比如：
 ```
@@ -258,10 +258,10 @@ url = https://OpenHUTB@github.com/OpenHUTB/bazaar.git
 然后就可以进行授权并继续push。
 
 
-###### 克隆个人仓库出错
+### 克隆个人仓库出错
 若出现SSL certificate problems请关闭加速器再克隆。
 
-###### git push 报错unexpected disconnect while reading sideband packet
+### git push 报错 unexpected disconnect while reading sideband packet
 
 ```shell
 # 增加缓存至4G
