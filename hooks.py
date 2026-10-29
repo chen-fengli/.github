@@ -17,7 +17,7 @@ def on_config(config, **kwargs):
 # （名称必须为 on_pre_build）
 def on_pre_build(config, **kwargs):
     # 源文件：项目根目录下的文件
-    src_file = os.path.join(os.path.dirname(__file__), 'CONTRIBUTING.md')
+src_file = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'CONTRIBUTING.md')
     # 目标文件：MkDocs 配置中的 docs_dir
     docs_dir = config["docs_dir"]
     os.makedirs(docs_dir, exist_ok=True)
@@ -33,7 +33,6 @@ def on_pre_build(config, **kwargs):
         )
  # 构建完成后，输出文档构建统计信息
 def on_post_build(config, **kwargs):
-    import os
     docs_path = config["docs_dir"]
     md_count = 0
     # 遍历统计所有md文档数量
