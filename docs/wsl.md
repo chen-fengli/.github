@@ -7,9 +7,9 @@
  打开「控制面板 → 程序 → 启用或关闭 Windows 功能」，勾选「适用于 Linux 的 Windows 子系统」和「虚拟机平台」两项，点击「确定」，完成后按提示重启电脑。 
     ![图片](img/wmx001.png)
 
-打开cmd
+打开PowerShell（推荐）或者cmd
 
-按'win+R'输入'cmd'
+按 Win+R，输入 cmd 回车打开命令行窗口，该安装命令在 PowerShell 下兼容性更好，CMD 也可以运行。
 
 执行安装命令
 
@@ -42,4 +42,4 @@ wsl --unregister <发行版名>
 ```powershell
 wsl --uninstall
 ```
-注意：wsl --uninstall 需要 Microsoft Store 版 WSL 2.0 及以上。如果提示没有该命令，可在「设置 → 应用 → 安装的应用」中先卸载对应的 Linux 发行版，再卸载「适用于 Linux 的 Windows 子系统」组件，然后重启电脑。
+注意：`wsl --uninstall` 是新版 WSL 提供的命令；旧版本 WSL 没有该参数。如果提示命令不存在，可在「设置 → 应用 → 安装的应用」中先卸载对应的 Linux 发行版，再卸载「适用于 Linux 的 Windows 子系统」组件，之后重启电脑。
